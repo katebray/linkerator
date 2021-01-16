@@ -15,12 +15,12 @@ const DB_URL =
 
 let client;
 
-// try {
-client = new Client(DB_URL);
-//client = new Client(CONNECTION_STRING);
-// } catch (err) {
-//   console.error('##########', err);
-// }
+try {
+  client = new Client(DB_URL);
+  //client = new Client(CONNECTION_STRING);
+} catch (err) {
+  console.error('##########', err);
+}
 
 // DATABASE METHODS
 

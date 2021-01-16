@@ -18,16 +18,18 @@ const Search = ({ createdLink }) => {
   }, [createdLink]);
 
   useEffect(() => {
-    setFilteredLinks(
-      allLinksData.filter((link) => {
-        return (
-          link.title.toLowerCase().includes(search.toLowerCase()) ||
-          link.tags.filter((tag) => {
-            return tag.tagName.toLowerCase().includes(search.toLowerCase());
-          }).length > 0
-        );
-      })
-    );
+    if (allLinksData) {
+      setFilteredLinks(
+        allLinksData.filter((link) => {
+          return (
+            link.title.toLowerCase().includes(search.toLowerCase()) ||
+            link.tags.filter((tag) => {
+              return tag.tagName.toLowerCase().includes(search.toLowerCase());
+            }).length > 0
+          );
+        })
+      );
+    }
   }, [search, allLinksData]);
 
   return (
