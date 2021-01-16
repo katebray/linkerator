@@ -1,12 +1,23 @@
 // Connect to DB
+// const { Client } = require('pg');
+// require('dotenv').config();
+// const CONNECTION_STRING =
+//   process.env.DB_URL ||
+//   'postgres://postgres:Campground16!@localhost:5432/linkerator';
+
 const { Client } = require('pg');
-const CONNECTION_STRING =
-  'postgres://postgres:Campground16!@localhost:5432/linkerator';
+require('dotenv').config();
+const { KEY, USER } = process.env;
+const DB_NAME = 'linkerator';
+const DB_URL =
+  process.env.DATABASE_URL ||
+  `postgres://${USER}:${KEY}@localhost:5432/${DB_NAME}`;
 
 let client;
 
 try {
-  client = new Client(CONNECTION_STRING);
+  client = new Client(DB_URL);
+  //client = new Client(CONNECTION_STRING);
 } catch (err) {
   console.error('##########', err);
 }
