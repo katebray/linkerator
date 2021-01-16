@@ -7,7 +7,7 @@
 
 const { Client } = require('pg');
 require('dotenv').config();
-const { KEY, USER } = process.env;
+const { USER, KEY } = process.env;
 const DB_NAME = 'linkerator';
 const DB_URL =
   process.env.DATABASE_URL ||
