@@ -36,7 +36,7 @@ const AddLink = ({ setCreatedLink }) => {
                 onChange={(e) => setDescript(e.target.value)}
               />
               <Form.Control
-                placeholder='Add Tags...'
+                placeholder='Add Tags Seperated By Spaces...'
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
               />

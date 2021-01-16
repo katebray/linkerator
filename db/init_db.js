@@ -59,7 +59,7 @@ async function buildTables() {
 async function populateInitialData() {
   try {
     await createNewLink({
-      title: 'www.careers.google.com',
+      title: 'careers.google.com',
       clicks: 0,
       descript:
         'Applying for a job at Google is easy! We already have all of your information.',

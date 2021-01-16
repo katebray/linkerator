@@ -6,7 +6,7 @@ const Links = ({ link, descript, date, clicks, tags }) => {
   return (
     <Card>
       <Card.Header as='h5'>
-        <a href={link} target='_blank'>
+        <a href={`http://${link}`} target='_blank'>
           {link}
         </a>
       </Card.Header>
