@@ -1,10 +1,3 @@
-// Connect to DB
-// const { Client } = require('pg');
-// require('dotenv').config();
-// const CONNECTION_STRING =
-//   process.env.DB_URL ||
-//   'postgres://postgres:Campground16!@localhost:5432/linkerator';
-
 const { Client } = require('pg');
 require('dotenv').config();
 const { USER, KEY } = process.env;
